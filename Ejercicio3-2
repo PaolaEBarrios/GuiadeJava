@@ -1,0 +1,73 @@
+///EJERCICIO 3PUNTO2
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package ejercicioclase3.pkg1;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author PAOLA BARRIOS
+ */
+public class Ejercicio32 {
+    
+    
+    public static void main(String[] args)
+    {
+
+        String abecedario="abcdefghijklmnñopqrstuvwxyz";
+        String cadenaFinal = "";
+        int desplazamiento=0;
+        int i;
+
+        String cadena=JOptionPane.showInputDialog("INGRESE UNA ORACION: ");
+
+        desplazamiento=Integer.parseInt(JOptionPane.showInputDialog("INGRESE UN NUMERO DE DESPLAZAMIENTO: "));
+
+//      hola que tal
+
+        String cadenaAux="";
+
+        for(i=0;i<cadena.length();i++)
+        {
+            
+           
+            for(int j=0;j<abecedario.length();j++)
+            {
+                
+                if(cadena.charAt(i)==abecedario.charAt(j))
+                {
+                   
+                   cadenaAux=String.valueOf(abecedario.charAt(j+desplazamiento));
+
+                }
+                else 
+                {
+                    if(cadena.charAt(i) == ' ')
+                    {
+                        cadenaAux=String.valueOf(abecedario.charAt(desplazamiento-1));
+                      
+                    }
+                    
+                }
+            }
+            
+
+            
+               cadenaFinal+=cadenaAux; 
+            
+            
+            
+        } 
+        
+        System.out.println("CADENA INGRESADA "+ cadena +" numero de desplazamiento " + desplazamiento);
+        System.out.println("CADENA FINAL DE ABECEDARIO POR DESPLAZAMIENTO: " + cadenaFinal);
+
+    
+    }
+    
+    
+}
