@@ -1,0 +1,79 @@
+ public static void main(String [] args)
+    {
+     
+       /* c. A lo anterior, con una variable extra, elija si se deben mostrar los números
+        pares o impares
+        */
+        
+       int n1;
+       int n2;
+       int bandera=1;
+       int contador=0;
+       int opc;
+       
+       Scanner lectura=new Scanner(System.in);
+       
+       System.out.println("INGRESE EL PRIMER NUMERO ");
+       n1=lectura.nextInt();
+       System.out.println("INGRESE EL SEGUNDO NUMERO: ");
+       n2=lectura.nextInt();
+       
+       contador=n1;
+       
+       System.out.println("¿DESEA MOSTRAR PARES O IMPARES?");
+       System.out.println(" Presione 1 para mostrar los numeros Pares");
+       System.out.println("Presion 2 para mostrar los numeros impares");
+       opc=lectura.nextInt();
+       
+       switch(opc)
+       {
+           case 1:
+               
+               while(bandera != 0)
+               {
+                  if(contador < n2)
+                    {
+                        contador++;
+                
+                        if(contador==n2)
+                        {
+                            bandera=0;
+                        }
+                        else if(contador %2 == 0)
+                        {
+                          System.out.println(" -- " + contador);
+                        }
+                    }
+             
+               }
+            
+           break;
+           case 2:
+               
+               while(bandera != 0)
+               {
+                   if(contador < n2)
+                    {
+                        contador++;
+                
+                        if(contador==n2)
+                        {
+                            bandera=0;
+                        }
+                        else if(contador %2 != 0)
+                        {
+                          System.out.println(" -- " + contador);
+                        }
+                    }
+               }
+               
+           break;
+           default:
+               System.out.println("ERROR, OPCION ELEGIDA NO EXISTE");
+              break;
+       }
+       
+   
+       
+        
+}
