@@ -1,0 +1,28 @@
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+//        Ejercicio Nº 2  
+//Tomando dos valores devolver el número mayor. 
+        
+        int n1,n2;
+        
+        
+        n1=Integer.parseInt(JOptionPane.showInputDialog(" INGRESE EL PRIMER NUMERO: "));
+        n2=Integer.parseInt(JOptionPane.showInputDialog("INGRESE EL SEGUNDO NUMERO: "));
+        
+        if(n1>n2)
+        {
+            System.out.println("EL NUMERO" +n1+  " ES MAYOR A "+n2);
+        }
+        else if(n2>n1)
+        {
+            
+            
+                System.out.println("EL NUMERO"+n1+  " ES MAYOR A "+n2);
+            
+        }
+        else
+        {
+            System.out.println("LOS NUMEROS SON IGUALES");
+        }
+    }

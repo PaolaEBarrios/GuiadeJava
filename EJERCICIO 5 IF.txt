@@ -1,0 +1,30 @@
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+//        Ejercicio Nº 5
+
+//    Una empresa quiere pagar a sus empleados por la asistencia de lunes a viernes 
+//    y un adicional por las horas trabajadas los domingos en tareas especiales. 
+//    a. El empleado asistió todo el mes, además entre 3 y 5 horas los domingos, adiciona el 3 % del sueldo. 
+//    b. Si asistió todo el mes y entre 6 y 10 horas los domingos, adiciona el 10 %. 
+//    c. No asistió todo el mes y entre 3 y 10 horas los domingos, adiciona el 2 %. 
+       
+      int salario;
+      int diasTrabajados;
+      int horasTrabajadas;
+      
+      salario=Integer.parseInt(JOptionPane.showInputDialog("INGRESE EL SALARIO: "));
+      diasTrabajados=Integer.parseInt(JOptionPane.showInputDialog(" INGRESE LOS DIAS TRABAJADOS: "));
+      horasTrabajadas=Integer.parseInt(JOptionPane.showInputDialog("INGRESE LAS HORAS TRABAJADAS: "));
+      
+      if(diasTrabajados == 30)
+      {
+          if(horasTrabajadas >= 51 && horasTrabajadas<=53)
+          {
+             
+          }
+      }
+      else{
+          
+      }
+    }
