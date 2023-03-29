@@ -1,0 +1,41 @@
+    public static void main(String[] args) {
+        int numeros[]=new int[3];
+        char letra;
+        
+        numeros[0]=Integer.parseInt(JOptionPane.showInputDialog("INGRESE EL 1ER NUMERO: "));
+        numeros[1]=Integer.parseInt(JOptionPane.showInputDialog("INGRESE EL 2DO NUMERO: "));
+        numeros[2]=Integer.parseInt(JOptionPane.showInputDialog("INGRESE EL 3ER NUMERO: "));
+      
+        letra=JOptionPane.showInputDialog("INGRESE EL ORDEN QUE DESEA VER : A ASCENDENTE O D DECRECIENTE").toUpperCase().charAt(0);
+        
+        ordenar(numeros,letra);
+        
+    }
+    
+    private static void ordenar(int[]numOrdenar,char l)
+    {
+        
+        switch(l)
+            {
+                case 'A':
+                    
+                   Arrays.sort(numOrdenar);
+                   
+                   System.out.println("NUMEROS EN FORMA ASCENDENTE: "+Arrays.toString(numOrdenar));
+                   
+                        break;
+                case 'D':
+                    
+                    Integer []numeros=new Integer[3];
+                    numeros[0]=numOrdenar[0];
+                    numeros[1]=numOrdenar[1];
+                    numeros[2]=numOrdenar[2];
+                    
+                    Arrays.sort(numeros,Collections.reverseOrder());
+                    System.out.println("NUMEROS EN FORMA ASCENDENTE: "+ Arrays.toString(numeros));
+                   break;
+                default:
+                    System.out.println("ELIJA UNA OPCION CORRECTA");
+                   break;
+            }
+    }

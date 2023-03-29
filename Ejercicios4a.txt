@@ -1,0 +1,39 @@
+   public static void main(String[] args) {
+    
+        
+        //a. haga un main, donde por parámetro ponga 3 números y una letra que
+        //represente ascendente o descendente y los muestre ordenados por tal criterio
+        
+        int numeros[]=new int[]{12,2,21};
+        char letra;
+        
+        letra=JOptionPane.showInputDialog("A - ASCENDENTE D- DESCENDENTE").toUpperCase().charAt(0);
+        System.out.println("LETRA : " + letra);
+        ordenar(numeros,letra);
+        
+    };
+    
+        private static void ordenar(int[]numOrdenar,char letra)
+        {
+            //int n1,n2,n3;
+            
+            switch(letra)
+            {
+                case 'A':
+                        System.out.println("ORDEN ASCENDENTE: ");
+                        System.out.println("" + numOrdenar[1]);
+                        System.out.println("" + numOrdenar[0]);
+                        System.out.println("" + numOrdenar[2]);
+                        break;
+                case 'D':
+                    System.out.println("ORDEN ASCENDENTE: ");
+                        System.out.println("" + numOrdenar[1]);
+                        System.out.println("" + numOrdenar[0]);
+                        System.out.println("" + numOrdenar[2]);
+                   break;
+                default:
+                    System.out.println("ELIJA UNA OPCION CORRECTA");
+                   break;
+            }
+            
+        }

@@ -1,0 +1,84 @@
+    public static void main(String[] args) {
+        
+//        c. lo mismo, pero usando los parámetros si hay alguno (como en a) y haciendo (b)
+//        si no detecta ninguno. Vea si con una función puede evitar repetir código.
+    
+        Scanner lectura=new Scanner(System.in);
+
+        int numeros[]=new int[]{0,0,0};
+        char letra;
+        int n1,n2,n3;
+        String num1,num2,num3;
+        
+        System.out.println("INGRESE EL 1er Numero: ");
+        num1=lectura.nextLine();
+        System.out.println("INGRESE EL 2do NUMERO: ");
+        num2=lectura.nextLine();
+        System.out.println("INGRSE EL 3er Numero:; ");
+        num3=lectura.nextLine();
+        System.out.println("INGRESE A . ASCENDENTE O D . DECRECIENTE: ");
+        letra=lectura.nextLine().toUpperCase().charAt(0);
+        if(num1.equals("") && num2.equals("") && num3.equals(""))
+        {
+            
+            ordenar(numeros,letra);
+        } 
+        else {
+            
+            
+           if(!num1.equals(""))
+           {
+               
+               numeros[0]=Integer.parseInt(num1);
+               
+               if(!num2.equals(""))
+               {
+                   numeros[1]=Integer.parseInt(num2);
+               }
+               if(!num3.equals(""))
+               {
+                   numeros[2]=Integer.parseInt(num3);
+               }
+               
+               ordenar(numeros,letra);
+           } 
+           
+           
+        }
+        
+    };
+    
+    
+    private static void ordenar(int []numOrdenar,char l)
+    {
+        
+        switch(l)
+        {
+            case 'A':
+                Arrays.sort(numOrdenar);
+                System.out.println("NUMEROS EN ORDEN ASCENDENTE "+ Arrays.toString(numOrdenar));
+                break;
+            case 'D':
+                Integer numeros[]=new Integer[3];
+                
+                for(int i=0;i<numOrdenar.length;i++)
+                {
+                    numeros[i]=numOrdenar[i];
+                }
+                
+                mostrarDescendente(numeros);
+                
+                break;
+            default:
+                System.out.println("OPCION INCORRECTA");
+                break;
+        }
+        
+    };
+    
+    private static void mostrarDescendente(Integer[]num)
+    {
+        
+        Arrays.sort(num,Collections.reverseOrder());
+        System.out.println("NUMEROS EN ORDEN DESCENDENTE: " + Arrays.toString(num));
+    }
