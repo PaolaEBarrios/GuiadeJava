@@ -1,0 +1,36 @@
+public static void main(String[] args) {
+        
+//        c. dado un vector de números, y un número X, que sume todos los números > X y
+//        retorne el resultado
+            
+          
+        int[] numeros=new int[3];
+        
+        numeros[0]=34;
+        numeros[1]=5;
+        numeros[2]=12;
+        
+        int n;
+        
+        int resultado=0;
+        
+        n=Integer.parseInt(JOptionPane.showInputDialog("INGRESE UN NUMERO: "));
+        
+        for(int i = 0;i<numeros.length;i++)
+        {
+            if(n>numeros[i])
+            {
+                resultado+=numeros[i];
+            }
+        }
+          
+        if(resultado!= 0)
+        {
+            System.out.println("EL RESULTADO DE LOS MAYORES A "+ n +" ES "+resultado);
+        }
+        else
+        {
+            System.out.println("El resultado es "+ resultado);
+        }
+        
+    }
