@@ -1,0 +1,20 @@
+    public static void main(String[] args) {
+        
+        int a=123;
+        char b='&';
+        String c="1234";
+        String d="abcd";
+        float e=3.5f;
+        double f=10.9;
+        boolean g=true;
+        
+        System.out.println((char)a);
+        System.out.println((int)b);
+        System.out.println(Integer.parseInt(c));
+        //System.out.println(Integer.parseInt(d));
+        System.out.println((float)a);
+        System.out.println((float)f);
+        System.out.println(String.valueOf(e));
+        
+        
+    }

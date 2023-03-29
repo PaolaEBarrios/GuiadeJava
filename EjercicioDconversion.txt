@@ -1,0 +1,11 @@
+    public static void main(String[] args) {
+        
+      //d- Utilice lo hecho en el punto c para mostrar la frase: Hay 7 áRboles de 128 años.
+        
+        char car='r';
+        int antiguo=128;
+        String piso="7";
+        
+        
+        System.out.println("Hay " + piso +" a"+String.valueOf(car).toUpperCase()+"boles de "+ String.valueOf(antiguo)+" años.");
+    }

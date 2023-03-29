@@ -1,0 +1,15 @@
+    public static void main(String[] args) {
+        
+      //b -  Luego sume las tres variables y muestre el resultado.
+        
+        char car='r';
+        int antiguo=128;
+        String piso="7";
+        int p,c;
+        
+        p=Integer.parseInt(piso);
+        c=(int)car;
+        
+        System.out.println("RESULTADO: " + (p+c+antiguo));
+        
+    }

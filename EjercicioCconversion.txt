@@ -1,0 +1,12 @@
+    public static void main(String[] args) {
+        
+      //c -  Luego convierta car y antiguo a tipo String, y car a mayúscula (toUpperCase()).
+        
+        char car='r';
+        int antiguo=128;
+        String piso="7";
+
+        
+        
+        System.out.println(" CAR: "+String.valueOf(car).toUpperCase();+" ANTIGUO: " +String.valueOf(antiguo);+" ");
+    }

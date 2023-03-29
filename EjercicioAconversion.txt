@@ -1,0 +1,12 @@
+    public static void main(String[] args) {
+        // a - Creando nuevas variables tipo entero, convierta car y piso a tipo int.
+        
+        char car='r';
+        int antiguo=128;
+        String piso="7";
+        int p,c;
+        
+        p=Integer.parseInt(piso);
+        c=(int)car;
+        
+    }
