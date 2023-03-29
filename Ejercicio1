@@ -1,0 +1,52 @@
+ public static void main(String[] args) {
+        /*a. Utilizando la sentencia while, imprima todos los números entre 2 variables “a” y “b”.
+            
+        */
+        
+        int bandera=1;
+        int n1;
+        int n2;
+        int contador=0;
+        int numMayor;
+        
+        Scanner lectura=new Scanner(System.in);
+                System.out.println("INGRESE EL PRIMER NUMERO: ");
+                n1 =lectura.nextInt();
+                System.out.println("INGRESE EL SEGUNDO NUMERO: ");
+                n2=lectura.nextInt();
+        
+         
+               
+                if(n1<n2)
+                {
+                    contador=n1;
+                    numMayor=n2;
+                }
+                else if(n1>n2)
+                {
+                    contador=n2;
+                    numMayor=n1;
+                }
+                else
+                {
+                   numMayor=0;
+                   bandera=0;
+                   System.out.println("LOS NUMEROS SON IGUALES");
+                }
+                
+
+        while(bandera!= 0)
+        {
+               
+                    contador++;
+                    if(contador==numMayor){
+                        bandera=0;
+                    }
+                    else
+                    {
+                      System.out.println("---" + contador);  
+                    }
+              
+        }
+    
+}
