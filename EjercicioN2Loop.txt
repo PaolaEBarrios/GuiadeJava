@@ -1,0 +1,26 @@
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        //2) Pida al usuario que ingrese 10 números y luego muestre solamente los múltiplos de 2.
+        
+        
+        int num[]=new int[10];
+        int i;
+        
+        System.out.println("POR FAVOR INGRESE 10 NUMEROS");
+        for(i=0;i<10;i++)
+        {
+            num[i]=Integer.parseInt(JOptionPane.showInputDialog(" INGRESE EL NUMERO " ));
+        }
+        System.out.println(" NUMEROS MULTIPLOS DE 2: ");
+        
+        for(i=0;i<10;i++)
+        {
+            if(num[i]%2 == 0)
+            {
+                
+                System.out.println(" " + num[i]);
+            }
+        }
+        
+    }

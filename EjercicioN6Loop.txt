@@ -1,0 +1,41 @@
+    public static void main(String[] args) {
+        
+//        6) En la Cámara de n Diputados se levanta una encuesta con
+//        todos los integrantes con el fin de determinar qué porcentaje de ellos está a favor
+//        del Tratado de Libre Comercio, qué porcentaje está en contra y qué porcentaje se abstiene de opinar.
+          
+          //257
+          
+          int favor=0;
+          int abstenciones=0,contra=0;
+          float total=0.0f;
+          int porcContra=0,porcFavor=0,porcAbs=0;
+          int diputados=257;
+          
+          favor=Integer.parseInt(JOptionPane.showInputDialog(" INGRESE LOS VOTOS A FAVOR: "));
+          contra=Integer.parseInt(JOptionPane.showInputDialog("INGRESE LOS VOTOS EN CONTRA: "));
+          
+          porcContra=(100*contra)/diputados;
+          porcFavor=(100*favor)/diputados;
+          
+          if(contra>favor)
+          {
+              abstenciones=contra-favor;
+          }
+          else if(contra<favor)
+          {
+              abstenciones=favor-contra;
+          }
+          else
+          {
+              abstenciones=favor-contra;
+          }
+          
+          porcAbs=(100*abstenciones)/diputados;
+          
+          
+          System.out.println("PORCENTAJE A FAVOR:    "+porcFavor);
+          System.out.println("PORCENTAJE EN CONTRA:  "+porcContra);
+          System.out.println("PORCENTAJE ABSTENCION: "+porcAbs);
+          
+    }

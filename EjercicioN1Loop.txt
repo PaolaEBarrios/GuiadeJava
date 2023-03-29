@@ -1,0 +1,20 @@
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+        /*1) Pedir que se ingrese por teclado un número y mostrar la tabla de multiplicar completa del 0 al 10. 
+            Imprimir el multiplicando, el multiplicador y el producto. 
+        */
+        
+        int numero,i;
+        int resultado;
+        numero=Integer.parseInt(JOptionPane.showInputDialog("INGRESE EL NUMERO PARA VER SU TABLA DE MULTIPLICAR: "));
+        
+        System.out.println("TABLA DEL " +numero);
+        for(i=0;i<10+1;i++)
+        {
+            resultado=numero*i;
+            
+            System.out.println(" " + numero + " * " + i+" = " + resultado);
+        }
+        
+    }

@@ -1,0 +1,34 @@
+    public static void main(String[] args) {
+        // TODO code application logic here
+        //3) Pedir que se ingresen 20 números e imprimir cuántos son positivos, 
+        //   cuántos negativos y cuántos neutros.
+        
+        
+        int num[]=new int[20];
+        int i;
+        int contPos=0,contNeg=0,contNeu=0;
+        
+        JOptionPane.showMessageDialog(null, "INGRESE 20 NUMEROS");
+        
+        
+        for(i=0;i<20;i++)
+        {
+            num[i]=Integer.parseInt(JOptionPane.showInputDialog(" INGRESE EL "+(i+10)+" NUMERO"));
+            if(num[i]<0)
+            {
+                contNeg++;
+            }
+            else if(num[i]>0)
+            {
+                contPos++;
+            }
+            else
+            {
+                contNeu++;
+            }
+        }
+        
+        System.out.println("CANTIDAD DE POSITIVOS: "+contPos);
+        System.out.println("CANTIDAD DE NEGATIVOS: "+contNeg);
+        System.out.println("CANTIDAD DE NEUTROS: "+contNeu);
+    }
