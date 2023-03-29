@@ -1,0 +1,108 @@
+    public static void main(String[] args) {
+        
+//        b. Dados 3 números y un orden (ascendente o decreciente) que ordene los
+//        mismos y los retorne en un vector de 3
+
+        int n1,n2,n3;
+        int numeros[]=new int [3];
+        int opc;
+        
+        //Scanner lectura=new Scanner(System.in);
+        
+//        System.out.println("Ingrese el primer numero: ");
+//        n1=lectura.nextInt();
+//        System.out.println("Ingrese el segundo numero: ");
+//        n2=lectura.nextInt();
+//        System.out.println("Ingrese el tercer numero: ");
+//        n3=lectura.nextInt();
+//        
+          n1=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el primer numero"));
+          n2=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el segundo numero"));
+          n3=Integer.parseInt(JOptionPane.showInputDialog("Ingrese el tercer numero"));
+          
+          opc=Integer.parseInt(JOptionPane.showInputDialog("MOSTRAR NUMEROS EN ORDEN 1 - DECRECIENTE  o 2- ASCENDENTE"));
+          
+         
+          switch(opc)
+        {
+              case 1:
+                  
+                  if(n1>n2 && n1 > n3){
+                      numeros[0]=n1;
+                      if(n2>n3)
+                      {
+                          numeros[1]=n2;
+                          numeros[2]=n3;
+                      }
+                      else{
+                           numeros[1]=n3;
+                          numeros[2]=n2;
+                      }
+                          
+                      
+                  }
+                  else if(n1>n2 && n1<n3)
+                  {
+                      numeros[2]=n2;
+                      numeros[1]=n1;
+                      numeros[0]=n3;
+                      
+                  }
+                  else if(n1<n2 && n1>n3)
+                  {
+                      numeros[0]=n2;
+                      numeros[1]=n1;
+                      numeros[2]=n3;
+                  }
+                  else{
+                      
+                      //CREAR UNA BANDERA BOOLEAN QUE MARQUE SI SON IGUALES EN CASO QUE SEA HACER UN SOUT EN LA SALIDA FINAL
+                      System.out.println("TODOS SON IGUALES, NO HAY UN ORDEN");
+                  }
+                  
+                  System.out.println("NUMEROS en DECRECIENTES");
+                  for(int i=0;i<3;i++)
+                  {
+                      
+                      System.out.println(numeros[i]+" ");
+                  }
+                  
+                    break;
+              case 2:
+                  
+                  if(n1<n2 && n1<n3)
+                  {
+                      numeros[0]=n1;
+                      if(n2<n3)
+                      {
+                          numeros[1]=n2;
+                      }
+                      else
+                      {
+                          numeros[2]=n3;
+                      }
+                  }
+                  else if(n1<n2 && n1>n3)
+                  {
+                      numeros[0]=n3;
+                      numeros[1]=n1;
+                      numeros[2]=n2;
+                  }
+                  else if(n1>n2 && n1<n3)
+                  {
+                      numeros[0]=n2;
+                      numeros[1]=n1;
+                      numeros[3]=n3;
+                     
+                  }
+                  else
+                  {
+                      System.out.println("SON IGULES LOS TRES NUMEROS, NO EXISTE UN ORDEN");
+                  }
+                  break;
+              default:
+                  System.out.println("OPCION INCORRECTA");
+                  break;
+          }
+        
+    }
